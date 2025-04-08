@@ -18,3 +18,116 @@ The endpoint <InlineCode><EndpointUrlOrigin fallback="HOSTNAME" /></InlineCode> 
 ### Further help
 
 If you're having trouble resolving this error, please reach out to [support@ngrok.com](mailto:support@ngrok.com?subject=Help%20with%20ERR_NGROK_3200)
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diblox Team</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #000;
+      --button: #4caf50;
+    }
+    [data-theme="light"] {
+      --bg: #111;
+      --text: #fff;
+      --button: #2196f3;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      background-color: var(--button);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    a {
+      color: var(--button);
+    }
+    .toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body data-theme="light">
+  <div class="toggle">
+    <label>
+      <input type="checkbox" id="themeToggle"> Mode Gelap
+    </label>
+  </div>
+  <div class="container">
+    <h1>Selamat Datang di Diblox Team</h1>
+    <p>Gabung dengan tim kami sekarang juga!</p>
+
+    <h3>Formulir Pendaftaran</h3>
+    <form action="https://formsubmit.co/yehazkielsultan@gmail.com" method="POST">
+      <input type="text" name="nama" placeholder="Nama Lengkap" required><br>
+      <input type="email" name="email" placeholder="Email Kamu" required><br>
+      <label for="posisi">Kau pilih jadi apa di Diblox Team?</label><br>
+      <select name="posisi" id="posisi" required>
+        <option value="">-- Pilih Posisi --</option>
+        <option value="Anggota">Anggota</option>
+        <option value="Admin">Admin</option>
+        <option value="Owner">Owner</option>
+        <option value="Co-Owner">Co-Owner</option>
+        <option value="Penjaga">Penjaga</option>
+        <option value="Editor">Editor</option>
+      </select><br>
+
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="Pendaftaran Baru Diblox Team">
+      <input type="hidden" name="_next" value="https://example.com/thanks.html">
+
+      <button type="submit">Kirim Pendaftaran</button>
+    </form>
+
+    <h3>Kunjungi Sosial Media Kami</h3>
+    <p>
+      <a href="https://chat.whatsapp.com/GiFrvpxAmX3KQGh2fuXMlM" target="_blank">Grup WhatsApp</a><br>
+      <a href="https://tiktok.com/@diblox_team" target="_blank">TikTok Diblox Team</a>
+    </p>
+  </div>
+
+  <script>
+    // Dark/Light Mode
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('change', function() {
+      document.body.setAttribute('data-theme', this.checked ? 'dark' : 'light');
+    });
+
+    // Blok klik kanan dan inspect
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.onkeydown = function(e) {
+      if (e.keyCode === 123 || 
+          (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+          (e.ctrlKey && e.keyCode === 85)) {
+        return false;
+      }
+    };
+  </script>
+</body>
+</html>
